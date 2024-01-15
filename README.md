@@ -6,6 +6,7 @@
 - **Endpoint:** `/auth/register`
 - **Method:** `POST`
 - **Description:** Register a new user.
+- **Status Code:** 201 (created)
 - **Request Body:**
   - `username` (string): User's username.
   - `password` (string): User's password.
@@ -25,6 +26,7 @@
 - **Endpoint:** `/auth/login`
 - **Method:** `POST`
 - **Description:** Log in an existing user.
+- **Status Code:** 200 (ok)
 - Request Body:
   - `username` (string): User's username.
   - `password` (string): User's password.
@@ -46,6 +48,7 @@
 - **Endpoint:** `/todos`
 - **Method:** `GET`
 - **Description:** Get a list of all todos.
+- **Status Code:** 200 (ok)
 - **Example Response:**
   ```json
   {
@@ -75,6 +78,7 @@
 - **Endpoint:** `/add-todo`
 - **Method:** `POST`
 - **Description:** Add a new todo.
+- **Status Code:** 201 (created)
 - **Request Body:**
   - `title` (string): Todo title.
   - `description` (string): Todo description (optional).
@@ -90,4 +94,70 @@
   ```json
   {
     "message": "Todo Added Succesfully"
+  }
+### Get Detail Todo
+- **Endpoint:** `/detail-todo/:id`
+- **Method:** `GET`
+- **Description:** Retrieve detailed information about a specific Todo.
+- **Status Code:** 200 (ok)
+- **Example Request:**
+  ```http
+  GET http://localhost:3030/detail-todo/65a54cd964494554e44ec04d
+- **Example Response:**
+  ```json
+  {
+    "_id": "65a54cd964494554e44ec04d",
+    "title": "ngoding",
+    "description": "final project",
+    "status": "Incomplete",
+    "createdAt": "2024-01-15T15:18:49.670Z",
+    "updatedAt": "2024-01-15T15:18:49.670Z",
+    "__v": 0
+  }
+### Update Todo
+- **Endpoint:** `/update-todo/:id`
+- **Method:** `PUT`
+- **Description:** Update details of a specific Todo.
+- **Status Code:** 201 (created)
+- **Request Body:**
+  - `title` (string): Todo title.
+  - `description` (string): Todo description (optional).
+  - `status` (string): Todo status.
+- **Example Request:**
+  ```json
+  {
+    "title": "makan",
+    "description": "di pantai",
+    "status": "Selesai"
+  }
+- **Example Response:**
+  ```json
+  {
+    "message": "Todo updated"
+  }
+### Delete Todo
+- **Endpoint:** `/delete-todo/:id`
+- **Method:** `DELETE`
+- **Description:** Delete a specific Todo by ID.
+- **Status Code:** 200 (ok)
+- **Example Request:**
+  ```http
+  DELETE http://localhost:3030/delete-todo/65a54cd964494554e44ec04d
+- **Example Response:**
+  ```json
+  {
+    "message": "Todo deleted succesfully"
+  }
+### Delete All Todos
+- **Endpoint:** `/delete-all`
+- **Method:** `DELETE`
+- **Description:** Delete a list of all todos.
+- **Status Code:** 200 (ok)
+- **Example Request:**
+  ```http
+  DELETE http://localhost:3030/delete-all
+- **Example Response:**
+  ```json
+  {
+    "message": "All todo deleted succesfully"
   }
