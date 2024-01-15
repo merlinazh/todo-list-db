@@ -19,6 +19,10 @@ db.once('open', () => console.log('we are connected'))
 app.use(todoRoutes)
 app.use(authRoutes)
 
+app.get('/', (req, res) => {
+    res.send('Todo');
+});
+
 app.listen(process.env.PORT || 3030, () => {
     console.log(`listening port: ${process.env.PORT}`);
 })
