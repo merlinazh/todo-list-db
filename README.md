@@ -40,9 +40,9 @@
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lcmxpbl9heml6YWgiLCJpYXQiOjE3MDUzMzAyNDB9.fZRR3wky0U9UeMhidt3JhWFlkbn94UV80Kd5B4Fuo00"
   }
 
-  ## Todo Operations
-
-  ### Get All Todos
+ ## Todo Operations
+ 
+ ### Get All Todos
 - **Endpoint:** `/todos`
 - **Method:** `GET`
 - **Description:** Get a list of all todos.
@@ -71,7 +71,7 @@
     ]
   }
 
-  ### Add Todo
+ ### Add Todo
 - **Endpoint:** `/add-todo`
 - **Method:** `POST`
 - **Description:** Add a new todo.
@@ -79,4 +79,15 @@
   - `title` (string): Todo title.
   - `description` (string): Todo description (optional).
   - `status` (string): Todo status.
-- Example Request:
+- **Example Request:**
+  ```json
+  {
+    "title": "ngoding",
+    "description": "final project",
+    "status":"incomplete"
+  }
+- **Example Response:**
+  ```json
+  {
+    "message": "Todo Added Succesfully"
+  }
