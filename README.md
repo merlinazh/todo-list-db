@@ -3,7 +3,7 @@
 ## Authentication
 
 ### Register
-- **Endpoint:** `/auth/register`
+- **Endpoint:** `/register`
 - **Method:** `POST`
 - **Description:** Register a new user.
 - **Status Code:** 201 (created)
@@ -24,7 +24,7 @@
   }
 
 ### Login
-- **Endpoint:** `/auth/login`
+- **Endpoint:** `/login`
 - **Method:** `POST`
 - **Description:** Log in an existing user.
 - **Status Code:** 200 (ok)
