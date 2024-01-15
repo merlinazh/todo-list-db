@@ -23,7 +23,7 @@
     "password":"$2b$10$x1sMUewIFLS6Y2hZ.xpBheoeYQaFtifCMbJ6EUGM.6jWZnbVSogGS"
   }
 
-  ### Login
+### Login
 - **Endpoint:** `/auth/login`
 - **Method:** `POST`
 - **Description:** Log in an existing user.
