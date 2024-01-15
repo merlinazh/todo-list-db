@@ -17,6 +17,7 @@
     "password": "password1234"
   }
 - **Example Response:**
+  ```json
   {
     "username":"merlin_azizah",
     "password":"$2b$10$x1sMUewIFLS6Y2hZ.xpBheoeYQaFtifCMbJ6EUGM.6jWZnbVSogGS"
