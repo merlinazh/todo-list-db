@@ -14,7 +14,7 @@ const addTodo = async (req, res) => {
     try {
         const { title, description } = req.body;
         const newTodo = await Todo.create({ title, description });
-        res.status(200).send({ message: 'Todo Added Succesfully' });
+        res.status(201).send({ message: 'Todo Added Succesfully' });
     } catch (err) {
         res.status(500).send(err);
     }
@@ -49,7 +49,7 @@ const updateTodo = async (req, res) => {
             return res.status(404).json({ error: 'Todo not found' })
         }
 
-        res.status(200).json(update);
+        res.status(201).json(update);
     } catch (err) {
         res.status(500).send(err);
     }
