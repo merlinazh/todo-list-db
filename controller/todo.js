@@ -49,7 +49,7 @@ const updateTodo = async (req, res) => {
             return res.status(404).json({ error: 'Todo not found' })
         }
 
-        res.status(201).json(update);
+        res.status(201).send({ message: 'Todo updated' });
     } catch (err) {
         res.status(500).send(err);
     }
