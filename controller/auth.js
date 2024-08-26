@@ -32,7 +32,6 @@ const login = (req, res) => {
 
     if(bcrypt.compareSync(password, userDB.password)) {
         const token = jwt.sign({ username: userDB.username }, process.env.JWT_TOKEN)
-
         res.json({ token })
     } else {
         return res.status(401).send('Wrong password')
